@@ -2,17 +2,12 @@
 const handleClick = (event) => {
   if (event.target.classList.contains("sqr")) {
     const squareIndex = event.target.id;
-    if (board[squareIndex] === "O" || board[squareIndex] === "X") {
-      return;
-    }
     placePiece(squareIndex);
     checkWin();
     checkForTie();
     switchPlayer();
-  } else {
-    return;
+    render();
   }
-  render();
 };
 
 const winningCombos = [
