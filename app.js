@@ -61,9 +61,7 @@ squareEls.forEach((squareEl) => {
 });
 
 function switchPlayer() {
-  if (winner === true) {
-    return; // no need to switch if there's a winner
-  } else {
+  if (winner === false) {
     turn = turn === "X" ? "O" : "X";
   }
 }
